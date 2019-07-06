@@ -51,7 +51,7 @@ class ShowTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let createViewController = segue.destination as? EditShowViewController {
+        if let createViewController = segue.destination as? CreateShowViewController {
             createViewController.tableVC = self
         }
     }

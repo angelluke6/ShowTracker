@@ -9,39 +9,23 @@
 import UIKit
 
 class EditShowViewController: UIViewController {
-    var tableVC: ShowTableViewController? = nil
-    @IBOutlet weak var nameOfShowField: UITextField!
-    @IBOutlet weak var seasonNumberField: UITextField!
-    @IBOutlet weak var episodeNumberField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func addShow(_ sender: Any) {
-//        tableVC?.shows.append(ShowData(showTitle: nameOfShowField?.text, season: seasonNumberField?.text, episode: episodeNumberField?.text, done: false))
-//        print(tableVC?.shows)
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            print("inside context")
-            let newShow = ShowData(context: context)
-            newShow.showTitle = self.nameOfShowField.text
-            newShow.episode = self.episodeNumberField.text
-            newShow.season = self.seasonNumberField.text
-            newShow.done = false
-            try? context.save()
-        }
-        dismiss(animated: true) {
-            
-        }
+    @IBAction func updateShowButton(_ sender: Any) {
     }
     
-    @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true) {
-            // Nothing!
-        }
+
+    @IBAction func cancelButton(_ sender: Any) {
     }
+    @IBOutlet weak var doneButton: UISwitch!
+    @IBOutlet weak var nameOfShowField: UITextField!
+    @IBOutlet weak var seasonNumberField: UITextField!
+    
+    @IBOutlet weak var episodeNumberfield: UITextField!
     /*
     // MARK: - Navigation
 

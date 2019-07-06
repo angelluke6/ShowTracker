@@ -15,7 +15,8 @@
 		96A6BF6122D0408F00D280F7 /* Show_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6BF6022D0408F00D280F7 /* Show_TrackerTests.swift */; };
 		96A6BF6C22D0408F00D280F7 /* Show_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6BF6B22D0408F00D280F7 /* Show_TrackerUITests.swift */; };
 		96A6BF7A22D0410D00D280F7 /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6BF7922D0410D00D280F7 /* ShowTableViewController.swift */; };
-		96B5107F22D13F2100E710C8 /* EditShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5107E22D13F2100E710C8 /* EditShowViewController.swift */; };
+		96B5107F22D13F2100E710C8 /* CreateShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5107E22D13F2100E710C8 /* CreateShowViewController.swift */; };
+		96B5108122D1586D00E710C8 /* EditShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B5108022D1586D00E710C8 /* EditShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,8 @@
 		96A6BF6B22D0408F00D280F7 /* Show_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_TrackerUITests.swift; sourceTree = "<group>"; };
 		96A6BF6D22D0408F00D280F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A6BF7922D0410D00D280F7 /* ShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
-		96B5107E22D13F2100E710C8 /* EditShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShowViewController.swift; sourceTree = "<group>"; };
+		96B5107E22D13F2100E710C8 /* CreateShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShowViewController.swift; sourceTree = "<group>"; };
+		96B5108022D1586D00E710C8 /* EditShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,8 @@
 				96A6BF5722D0408F00D280F7 /* Info.plist */,
 				96A6BF4F22D0408E00D280F7 /* Show_Tracker.xcdatamodeld */,
 				96A6BF7922D0410D00D280F7 /* ShowTableViewController.swift */,
-				96B5107E22D13F2100E710C8 /* EditShowViewController.swift */,
+				96B5107E22D13F2100E710C8 /* CreateShowViewController.swift */,
+				96B5108022D1586D00E710C8 /* EditShowViewController.swift */,
 			);
 			path = "Show Tracker";
 			sourceTree = "<group>";
@@ -265,7 +268,8 @@
 				96A6BF7A22D0410D00D280F7 /* ShowTableViewController.swift in Sources */,
 				96A6BF5122D0408E00D280F7 /* Show_Tracker.xcdatamodeld in Sources */,
 				96A6BF4922D0408E00D280F7 /* AppDelegate.swift in Sources */,
-				96B5107F22D13F2100E710C8 /* EditShowViewController.swift in Sources */,
+				96B5107F22D13F2100E710C8 /* CreateShowViewController.swift in Sources */,
+				96B5108122D1586D00E710C8 /* EditShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

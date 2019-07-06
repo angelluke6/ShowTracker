@@ -40,6 +40,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jce-px-29v" kind="show" identifier="EditShow" id="QAa-AY-EhZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,12 +55,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bn-4D-otY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="25"/>
+            <point key="canvasLocation" x="806" y="21"/>
         </scene>
         <!--Title-->
         <scene sceneID="odW-BQ-Z03">
             <objects>
-                <viewController id="aCX-BK-kHv" customClass="EditShowViewController" customModule="Show_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aCX-BK-kHv" customClass="CreateShowViewController" customModule="Show_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dBc-9c-NVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +126,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3M-kI-6wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459.4202898550725" y="21.428571428571427"/>
+            <point key="canvasLocation" x="1471" y="723"/>
+        </scene>
+        <!--Edit Show View Controller-->
+        <scene sceneID="BYc-nV-JKc">
+            <objects>
+                <viewController id="jce-px-29v" customClass="EditShowViewController" customModule="Show_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mcq-ym-4HN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-J9-ToG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Season #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBy-zL-0np">
+                                        <rect key="frame" x="20" y="143" width="137" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Episode #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-Mh-p6O">
+                                        <rect key="frame" x="20" y="187" width="137" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97u-iw-Rab">
+                                        <rect key="frame" x="172" y="300" width="92" height="30"/>
+                                        <state key="normal" title="Update Show"/>
+                                        <connections>
+                                            <action selector="addShow:" destination="aCX-BK-kHv" eventType="touchUpInside" id="rVx-Ld-vFf"/>
+                                            <action selector="updateShowButton:" destination="jce-px-29v" eventType="touchUpInside" id="t31-fD-sdc"/>
+                                        </connections>
+                                    </button>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hk5-qX-kV7">
+                                        <rect key="frame" x="0.0" y="38" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Edit Show" id="fbi-c7-KA4">
+                                                <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="Lzf-tM-5ta">
+                                                    <connections>
+                                                        <action selector="cancelButton:" destination="jce-px-29v" id="Cvy-wo-k0d"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Show" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-xB-eC6">
+                                        <rect key="frame" x="20" y="97" width="137" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGe-Dg-zx2">
+                                        <rect key="frame" x="31" y="249" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-p1-q6b">
+                                        <rect key="frame" x="80" y="244" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="97u-iw-Rab" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="172" id="20n-MR-cLy"/>
+                                    <constraint firstItem="cOp-p1-q6b" firstAttribute="leading" secondItem="VGe-Dg-zx2" secondAttribute="trailing" constant="19" id="9Is-Mz-rg5"/>
+                                    <constraint firstItem="97u-iw-Rab" firstAttribute="top" secondItem="kB1-Mh-p6O" secondAttribute="bottom" constant="57" id="D1Y-Ya-rCb"/>
+                                    <constraint firstItem="kB1-Mh-p6O" firstAttribute="top" secondItem="mBy-zL-0np" secondAttribute="bottom" constant="18" id="DyL-fl-iMo"/>
+                                    <constraint firstItem="kB1-Mh-p6O" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="OKj-iR-Plt"/>
+                                    <constraint firstItem="VGe-Dg-zx2" firstAttribute="top" secondItem="kB1-Mh-p6O" secondAttribute="bottom" constant="33" id="V4i-fl-oau"/>
+                                    <constraint firstItem="9hX-xB-eC6" firstAttribute="top" secondItem="XQ5-9I-PRi" secondAttribute="top" constant="75" id="hIp-1Q-9oL"/>
+                                    <constraint firstItem="mBy-zL-0np" firstAttribute="top" secondItem="9hX-xB-eC6" secondAttribute="bottom" constant="16" id="jN4-ic-VTh"/>
+                                    <constraint firstItem="cOp-p1-q6b" firstAttribute="firstBaseline" secondItem="kB1-Mh-p6O" secondAttribute="baseline" constant="33" id="p2G-cV-QhS"/>
+                                    <constraint firstItem="mBy-zL-0np" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="q4A-Zy-dlB"/>
+                                    <constraint firstItem="9hX-xB-eC6" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="wNI-4p-wue"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="XQ5-9I-PRi"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5uu-6U-3UN"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="cOp-p1-q6b" id="gDp-1m-sQm"/>
+                        <outlet property="episodeNumberfield" destination="kB1-Mh-p6O" id="LLJ-Hc-ytQ"/>
+                        <outlet property="nameOfShowField" destination="9hX-xB-eC6" id="KJ5-eS-JA4"/>
+                        <outlet property="seasonNumberField" destination="mBy-zL-0np" id="Ruc-Rp-VWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqx-Ug-f89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2090" y="21"/>
         </scene>
     </scenes>
 </document>
