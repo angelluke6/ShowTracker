@@ -9,6 +9,11 @@
 import UIKit
 
 class ShowTableViewController: UITableViewController {
+    let shows = [
+        ShowData(showTitle: "garbage", season: "3", episode: "5", done: false),
+        ShowData(showTitle: "garbage", season: "3", episode: "5", done: true)
+
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +34,18 @@ class ShowTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return shows.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-
-        cell.textLabel?.text = "hello"
-
+        let show = shows[indexPath.row]
+        cell.textLabel?.text = "\(show.showTitle), Season \(show.season), Episode \(show.episode)"
+        if show.done {
+            cell.textLabel?.textColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        }
+//        cell.tintColor
         return cell
     }
  
