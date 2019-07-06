@@ -9,24 +9,17 @@
 import UIKit
 
 class ShowTableViewController: UITableViewController {
-    let shows = [
+    var shows = [
         ShowData(showTitle: "garbage", season: "3", episode: "5", done: false),
         ShowData(showTitle: "garbage", season: "3", episode: "5", done: true)
 
     ]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -45,10 +38,14 @@ class ShowTableViewController: UITableViewController {
         if show.done {
             cell.textLabel?.textColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         }
-//        cell.tintColor
         return cell
     }
- 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let createViewController = segue.destination as? EditShowViewController {
+            createViewController.tableVC = self
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
