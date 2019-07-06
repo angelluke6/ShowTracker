@@ -9,11 +9,11 @@
 import Foundation
 
 class ShowData {
-    let showTitle : String
-    let season : String
-    let episode : String
+    let showTitle : String?
+    let season : String?
+    let episode : String?
     let done : Bool
-    init(showTitle: String, season: String, episode: String, done: Bool) {
+    init(showTitle: String?, season: String?, episode: String?, done: Bool) {
         self.showTitle = showTitle
         self.season = season
         self.episode = episode

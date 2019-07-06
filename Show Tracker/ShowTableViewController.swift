@@ -9,17 +9,24 @@
 import UIKit
 
 class ShowTableViewController: UITableViewController {
-    var shows = [
-        ShowData(showTitle: "garbage", season: "3", episode: "5", done: false),
-        ShowData(showTitle: "garbage", season: "3", episode: "5", done: true)
+    var shows : [ShowData] = []
 
-    ]
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        getShowData()
+        
+    }
+    
+    func getShowData() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let showsInCoreData = try? context.fetch(ShowData.fetchRequest()){
+                if let shows = showsInCoreData as? [ShowData]{
+                    self.shows = shows
+                    tableView.reloadData()
+                }
+            }
+        }
     }
 
-    // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -34,9 +41,11 @@ class ShowTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let show = shows[indexPath.row]
-        cell.textLabel?.text = "\(show.showTitle), Season \(show.season), Episode \(show.episode)"
         if show.done {
             cell.textLabel?.textColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+            cell.textLabel?.text = show.showTitle ?? ""
+        } else {
+            cell.textLabel?.text = "\(show.showTitle ?? ""), Season \(show.season ?? ""), Episode \(show.episode ?? "")"
         }
         return cell
     }
