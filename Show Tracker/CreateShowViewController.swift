@@ -14,12 +14,12 @@ class CreateShowViewController: UIViewController {
     @IBOutlet weak var seasonNumberField: UITextField!
     @IBOutlet weak var episodeNumberField: UITextField!
     
+    @IBOutlet weak var networkField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-     @IBOutlet weak var network: UITextField!
     @IBAction func addShow(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             print("inside context")
@@ -28,7 +28,7 @@ class CreateShowViewController: UIViewController {
             newShow.episode = self.episodeNumberField.text
             newShow.season = self.seasonNumberField.text
             newShow.done = false
-            newShow.network = self.network.text
+            newShow.network = self.networkField.text
             try? context.save()
         }
         dismiss(animated: true) {

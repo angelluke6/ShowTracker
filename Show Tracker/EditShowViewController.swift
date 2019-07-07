@@ -18,8 +18,6 @@ class EditShowViewController: UIViewController {
         episodeNumberfield.text = showData?.episode
         networkField.text = showData?.network
     }
-    @IBOutlet weak var networkField: UITextField!
-    
     @IBAction func updateShowButton(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             print("inside context")
@@ -50,6 +48,7 @@ class EditShowViewController: UIViewController {
     
     @IBOutlet weak var episodeNumberfield: UITextField!
     
+    @IBOutlet weak var networkField: UITextField!
     /*
     // MARK: - Navigation
 
