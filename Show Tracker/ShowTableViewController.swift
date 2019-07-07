@@ -49,12 +49,20 @@ class ShowTableViewController: UITableViewController {
         }
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "EditShow", sender: indexPath.row)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let createViewController = segue.destination as? CreateShowViewController {
             createViewController.tableVC = self
+        } else if let createViewController = segue.destination as? EditShowViewController {
+            if let index = sender as? Int {
+                createViewController.showData = shows[index]
+            }
+          
         }
     }
+    
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: {

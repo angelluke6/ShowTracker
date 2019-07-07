@@ -179,22 +179,24 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGe-Dg-zx2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGe-Dg-zx2">
                                         <rect key="frame" x="31" y="249" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-p1-q6b">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-p1-q6b">
                                         <rect key="frame" x="80" y="244" width="51" height="31"/>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="97u-iw-Rab" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="172" id="20n-MR-cLy"/>
+                                    <constraint firstItem="cOp-p1-q6b" firstAttribute="leading" secondItem="VGe-Dg-zx2" secondAttribute="trailing" constant="8" id="4Oj-0F-N5c"/>
                                     <constraint firstItem="cOp-p1-q6b" firstAttribute="leading" secondItem="VGe-Dg-zx2" secondAttribute="trailing" constant="19" id="9Is-Mz-rg5"/>
                                     <constraint firstItem="97u-iw-Rab" firstAttribute="top" secondItem="kB1-Mh-p6O" secondAttribute="bottom" constant="57" id="D1Y-Ya-rCb"/>
                                     <constraint firstItem="kB1-Mh-p6O" firstAttribute="top" secondItem="mBy-zL-0np" secondAttribute="bottom" constant="18" id="DyL-fl-iMo"/>
+                                    <constraint firstItem="VGe-Dg-zx2" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="31" id="HUc-80-xwp"/>
                                     <constraint firstItem="kB1-Mh-p6O" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="OKj-iR-Plt"/>
                                     <constraint firstItem="VGe-Dg-zx2" firstAttribute="top" secondItem="kB1-Mh-p6O" secondAttribute="bottom" constant="33" id="V4i-fl-oau"/>
                                     <constraint firstItem="9hX-xB-eC6" firstAttribute="top" secondItem="XQ5-9I-PRi" secondAttribute="top" constant="75" id="hIp-1Q-9oL"/>
