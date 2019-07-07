@@ -3,10 +3,11 @@
     <entity name="ShowData" representedClassName="ShowData" syncable="YES" codeGenerationType="class">
         <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="episode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="network" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="season" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="showTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ShowData" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ShowData" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

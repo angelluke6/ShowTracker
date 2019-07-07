@@ -19,10 +19,8 @@ class CreateShowViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+     @IBOutlet weak var network: UITextField!
     @IBAction func addShow(_ sender: Any) {
-//        tableVC?.shows.append(ShowData(showTitle: nameOfShowField?.text, season: seasonNumberField?.text, episode: episodeNumberField?.text, done: false))
-//        print(tableVC?.shows)
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             print("inside context")
             let newShow = ShowData(context: context)
@@ -30,12 +28,14 @@ class CreateShowViewController: UIViewController {
             newShow.episode = self.episodeNumberField.text
             newShow.season = self.seasonNumberField.text
             newShow.done = false
+            newShow.network = self.network.text
             try? context.save()
         }
         dismiss(animated: true) {
             
         }
     }
+   
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true) {

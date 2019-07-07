@@ -15,8 +15,11 @@ class EditShowViewController: UIViewController {
         doneButton.isOn = showData!.done
         nameOfShowField.text = showData?.showTitle
         seasonNumberField.text = showData?.season
-        episodeNumberfield.text = showData?.episode 
+        episodeNumberfield.text = showData?.episode
+        networkField.text = showData?.network
     }
+    @IBOutlet weak var networkField: UITextField!
+    
     @IBAction func updateShowButton(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             print("inside context")
@@ -25,6 +28,7 @@ class EditShowViewController: UIViewController {
                showDataPresent.episode = self.episodeNumberfield.text
                showDataPresent.season = self.seasonNumberField.text
                showDataPresent.done = self.doneButton.isOn
+               showDataPresent.network = self.networkField.text
                 try? context.save()
             }
            

@@ -43,9 +43,9 @@ class ShowTableViewController: UITableViewController {
         let show = shows[indexPath.row]
         if show.done {
             cell.textLabel?.textColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
-            cell.textLabel?.text = show.showTitle ?? ""
+            cell.textLabel?.text = show.showTitle ?? "" + " (Done)"
         } else {
-            cell.textLabel?.text = "\(show.showTitle ?? ""), Season \(show.season ?? ""), Episode \(show.episode ?? "")"
+            cell.textLabel?.text = "\(show.showTitle ?? ""), Season \(show.season ?? ""), Episode \(show.episode ?? ""), \(show.network ?? " ")"
         }
         return cell
     }
