@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Show Tracker
 //
-//  Created by Jason Kornfield on 7/5/19.
-//  Copyright © 2019 AJ inc. Designs. All rights reserved.
+//  Created by Angela Zarrilli on 7/5/19.
+//  Copyright © 2019 AJ ink Designs. All rights reserved.
 //
 
 import UIKit

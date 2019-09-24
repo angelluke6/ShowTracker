@@ -2,8 +2,8 @@
 //  EditShowViewController.swift
 //  Show Tracker
 //
-//  Created by Jason Kornfield on 7/6/19.
-//  Copyright © 2019 AJ inc. Designs. All rights reserved.
+//  Created by Angela Zarrilli on 7/6/19.
+//  Copyright © 2019 AJ ink Designs. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ class CreateShowViewController: UIViewController {
     }
     @IBAction func addShow(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            print("inside context")
+            print("inside create context")
             let newShow = ShowData(context: context)
             newShow.showTitle = self.nameOfShowField.text
             newShow.episode = self.episodeNumberField.text
@@ -30,6 +30,7 @@ class CreateShowViewController: UIViewController {
             newShow.done = false
             newShow.network = self.networkField.text
             try? context.save()
+            tableVC?.viewWillAppear(true)
         }
         dismiss(animated: true) {
             

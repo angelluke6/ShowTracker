@@ -2,13 +2,14 @@
 //  EditShowViewController.swift
 //  Show Tracker
 //
-//  Created by Jason Kornfield on 7/6/19.
-//  Copyright © 2019 AJ inc. Designs. All rights reserved.
+//  Created by Angela Zarrilli on 7/6/19.
+//  Copyright © 2019 AJ ink Designs. All rights reserved.
 //
 
 import UIKit
 
 class EditShowViewController: UIViewController {
+    var tableVC: ShowTableViewController? = nil
     var showData: ShowData? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class EditShowViewController: UIViewController {
     }
     @IBAction func updateShowButton(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            print("inside context")
+            print("inside edit context")
             if let showDataPresent = self.showData {
                showDataPresent.showTitle = self.nameOfShowField.text
                showDataPresent.episode = self.episodeNumberfield.text
@@ -28,6 +29,7 @@ class EditShowViewController: UIViewController {
                showDataPresent.done = self.doneButton.isOn
                showDataPresent.network = self.networkField.text
                 try? context.save()
+                tableVC?.viewWillAppear(true)
             }
            
         }
