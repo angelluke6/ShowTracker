@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qhe-VG-ZT9">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qhe-VG-ZT9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +32,7 @@
                         </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fol-3K-X6r">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fol-3K-X6r" id="HkU-wg-HaK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -62,23 +60,11 @@
             <objects>
                 <viewController id="aCX-BK-kHv" customClass="CreateShowViewController" customModule="Show_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dBc-9c-NVa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Season #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-8d-kn8">
-                                <rect key="frame" x="20" y="143" width="137" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Episode #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTW-rA-nVx">
-                                <rect key="frame" x="20" y="187" width="137" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRE-Ip-31Q">
-                                <rect key="frame" x="172" y="326" width="70" height="30"/>
+                                <rect key="frame" x="172" y="338" width="70" height="30"/>
                                 <state key="normal" title="Add Show"/>
                                 <connections>
                                     <action selector="addShow:" destination="aCX-BK-kHv" eventType="touchUpInside" id="J2S-Fd-xgJ"/>
@@ -97,15 +83,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Season #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-8d-kn8">
+                                <rect key="frame" x="20" y="161" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Episode #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTW-rA-nVx">
+                                <rect key="frame" x="20" y="205" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Show" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-dJ-UQF">
-                                <rect key="frame" x="20" y="97" width="137" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="115" width="137" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Network" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j74-DG-KPl">
-                                <rect key="frame" x="20" y="238" width="137" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="256" width="137" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -117,10 +111,10 @@
                             <constraint firstItem="fTW-rA-nVx" firstAttribute="leading" secondItem="Pep-zJ-zka" secondAttribute="leading" constant="20" id="CSK-j8-SAF"/>
                             <constraint firstItem="zRE-Ip-31Q" firstAttribute="top" secondItem="j74-DG-KPl" secondAttribute="bottom" constant="32" id="FN9-za-I3Q"/>
                             <constraint firstItem="j74-DG-KPl" firstAttribute="leading" secondItem="Pep-zJ-zka" secondAttribute="leading" constant="20" id="He6-Zf-7LJ"/>
+                            <constraint firstItem="bX5-dJ-UQF" firstAttribute="top" secondItem="Pep-zJ-zka" secondAttribute="top" constant="115" id="JoA-s1-ydF"/>
                             <constraint firstItem="fTW-rA-nVx" firstAttribute="top" secondItem="Qvj-8d-kn8" secondAttribute="bottom" constant="18" id="ZV3-bK-A5F"/>
                             <constraint firstItem="Qvj-8d-kn8" firstAttribute="top" secondItem="bX5-dJ-UQF" secondAttribute="bottom" constant="16" id="ZfL-Bp-6FG"/>
                             <constraint firstItem="zRE-Ip-31Q" firstAttribute="leading" secondItem="Pep-zJ-zka" secondAttribute="leading" constant="172" id="emN-im-F9G"/>
-                            <constraint firstItem="bX5-dJ-UQF" firstAttribute="top" secondItem="Pep-zJ-zka" secondAttribute="top" constant="75" id="gHZ-E6-cil"/>
                             <constraint firstItem="bX5-dJ-UQF" firstAttribute="leading" secondItem="Pep-zJ-zka" secondAttribute="leading" constant="20" id="qep-1j-vfF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pep-zJ-zka"/>
@@ -149,24 +143,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Season #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBy-zL-0np">
-                                        <rect key="frame" x="20" y="143" width="137" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Episode #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-Mh-p6O">
-                                        <rect key="frame" x="20" y="187" width="137" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Network" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-hA-eH5">
-                                        <rect key="frame" x="20" y="239" width="137" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hk5-qX-kV7">
                                         <rect key="frame" x="0.0" y="38" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -180,20 +156,14 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Show" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-xB-eC6">
-                                        <rect key="frame" x="20" y="97" width="137" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGe-Dg-zx2">
-                                        <rect key="frame" x="31" y="317" width="41" height="21"/>
+                                        <rect key="frame" x="31" y="373" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-p1-q6b">
-                                        <rect key="frame" x="91" y="317" width="51" height="31"/>
+                                        <rect key="frame" x="91" y="373" width="51" height="31"/>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97u-iw-Rab">
                                         <rect key="frame" x="169" y="334" width="92" height="30"/>
@@ -203,6 +173,26 @@
                                             <action selector="updateShowButton:" destination="jce-px-29v" eventType="touchUpInside" id="t31-fD-sdc"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Season #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBy-zL-0np">
+                                        <rect key="frame" x="16" y="156" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Episode #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-Mh-p6O">
+                                        <rect key="frame" x="16" y="200" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Network" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-hA-eH5">
+                                        <rect key="frame" x="16" y="252" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Show" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-xB-eC6">
+                                        <rect key="frame" x="16" y="110" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -216,8 +206,8 @@
                                     <constraint firstItem="kB1-Mh-p6O" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="OKj-iR-Plt"/>
                                     <constraint firstItem="Gfe-hA-eH5" firstAttribute="top" secondItem="kB1-Mh-p6O" secondAttribute="bottom" constant="22" id="UMP-At-Uk6"/>
                                     <constraint firstItem="VGe-Dg-zx2" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="31" id="gDh-hK-85c"/>
-                                    <constraint firstItem="9hX-xB-eC6" firstAttribute="top" secondItem="XQ5-9I-PRi" secondAttribute="top" constant="75" id="hIp-1Q-9oL"/>
                                     <constraint firstItem="mBy-zL-0np" firstAttribute="top" secondItem="9hX-xB-eC6" secondAttribute="bottom" constant="16" id="jN4-ic-VTh"/>
+                                    <constraint firstItem="9hX-xB-eC6" firstAttribute="top" secondItem="XQ5-9I-PRi" secondAttribute="top" constant="115" id="kqs-LW-2fr"/>
                                     <constraint firstItem="mBy-zL-0np" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="q4A-Zy-dlB"/>
                                     <constraint firstItem="9hX-xB-eC6" firstAttribute="leading" secondItem="XQ5-9I-PRi" secondAttribute="leading" constant="20" id="wNI-4p-wue"/>
                                     <constraint firstItem="VGe-Dg-zx2" firstAttribute="top" secondItem="Gfe-hA-eH5" secondAttribute="bottom" constant="22" id="wQq-6N-L7i"/>
